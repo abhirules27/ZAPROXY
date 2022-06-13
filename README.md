@@ -1,36 +1,32 @@
 # ZAPROXY
 OWASP ZAPROXY Tutorial
 ZAP PROXY TUTORIALS (YouTube: Arkenstone Learning: OWASP ZAP Step-by-Step)
+//-------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------------
 TABLE OF CONTENTS
-1.	Introduction	2
-2.	Main feature	2
-3.	Installing ZAP & Understanding its features	2
-4.	Creating Dynamic SSL Certificate & Importing in Browser	3
-5.	Proxy Web Traffic through ZAP	3
-6.	Configure FoxyProxy	4
-7.	Installing Mutillidae	4
-8.	Intercepting request with ZAP (Man in the Middle Attack-MITM)	4
-9.	Intercepting specific request with ZAP	5
-10.	Manually explore for Vuln Assessment in ZAP	6
-11.	Spidering a Website with OWASP	6
-12.	Automated Vuln Assessment of a Single Page in ZAP	7
-13.	Automated Vuln Assessment of Entire Site in ZAP	7
-14.	Automated Vuln Assessment of a Partial Site in ZAP	8
-15.	Generating Vuln Assessment Report in ZAP	8
-16.	Contexts, scope and Modes in ZAP	8
-17.	Sessions in ZAP (first screen pop in start)	9
-18.	ZAP Request Editor	10
-19.	Passive Scan Rules in ZAP	11
-20.	Active Scanning in ZAP	12
-21.	ZAP Scan Policy	12
-22.	Attack Mode	12
-
-
-
-
-
-
-
+1.	Introduction	
+2.	Main feature	
+3.	Installing ZAP & Understanding its features	
+4.	Creating Dynamic SSL Certificate & Importing in Browser	
+5.	Proxy Web Traffic through ZAP	
+6.	Configure FoxyProxy	
+7.	Installing Mutillidae	
+8.	Intercepting request with ZAP (Man in the Middle Attack-MITM)	
+9.	Intercepting specific request with ZAP	
+10.	Manually explore for Vuln Assessment in ZAP	
+11.	Spidering a Website with OWASP	
+12.	Automated Vuln Assessment of a Single Page in ZAP	
+13.	Automated Vuln Assessment of Entire Site in ZAP	
+14.	Automated Vuln Assessment of a Partial Site in ZAP	
+15.	Generating Vuln Assessment Report in ZAP	
+16.	Contexts, scope and Modes in ZAP	
+17.	Sessions in ZAP (first screen pop in start)	
+18.	ZAP Request Editor	
+19.	Passive Scan Rules in ZAP	
+20.	Active Scanning in ZAP	
+21.	ZAP Scan Policy	
+22.	Attack Mode	
+//-------------------------------------------------------------------------------------------------------------------------------
 
 ZAP TUTORIALS
 1.	Introduction
@@ -38,7 +34,7 @@ ZAP TUTORIALS
     b.	Cross platform: Win, Mac & Linux
     c.	Can be used for Automated Testing
     d.	Can be used with Burp Suite
-
+//-------------------------------------------------------------------------------------------------------------------------------
 2.	Main feature
     a.	Intercepting proxy: Between Browser and web application
     b.	Spider
@@ -49,7 +45,7 @@ ZAP TUTORIALS
     g.	ZAP Extensions available
     h.	Can be extended: Open Source
     i.	Dynamic SSL Certificates
-
+//-------------------------------------------------------------------------------------------------------------------------------
 3.	Installing ZAP & Understanding its features
 	  Website: https://www.zaproxy.org/download/
 
@@ -78,7 +74,7 @@ ZAP TUTORIALS
         v.	+ Icon:		To add tabs.
 
     f.	Footer bar:	Displays summary of Alerts found and status of main automated tools.
-
+//-------------------------------------------------------------------------------------------------------------------------------
 4.	Creating Dynamic SSL Certificate & Importing in Browser
 
     a.	Start ZAP. Chose “No, I do not want to persist this session at this moment in time”.
@@ -91,7 +87,7 @@ ZAP TUTORIALS
     d.	Certificate imported. This step is necessary to navigate inside browser and see necessary messages.
 
     e.	Close Firefox
-
+//-------------------------------------------------------------------------------------------------------------------------------
 5.	Proxy Web Traffic through ZAP
 
     a.	Start ZAP and check Proxy running status at Footer Bar.
@@ -101,16 +97,15 @@ ZAP TUTORIALS
     c.	Check changed Port No at Footer Bar.
 
     d.	Making changes in Browser
-        i.	Open Firefox > Menu > Settings > Network Settings > Select “Manual Proxy Configuration” > HTTP Proxy: 127.0.0.1 > Port No 8081 > Tick “Also
-        use
-        this proxy for HTTPS > OK.
+        i.	Open Firefox > Menu > Settings > Network Settings > Select “Manual Proxy Configuration” > HTTP Proxy: 127.0.0.1 > Port No 8081 > Tick 
+	“Also use this proxy for HTTPS > OK.
 
         ii.	Open any website. All messages will start getting logged in History Bar.
 
         iii.	You may see “site steps” in Tree Window.
 
         iv.	You may see ZAP HUD Window. Click on “Do not show this screen again” > Click “Continue to your target”.
-
+//-------------------------------------------------------------------------------------------------------------------------------
 6.	Configure FoxyProxy
     a.	Open Firefox > Menu > Settings > Network Settings > Select “No proxy”
 
@@ -121,8 +116,9 @@ ZAP TUTORIALS
     d.	Open Firefox > Click on FoxyProxy > Add > Name it “ZAP” > Proxy Type: HTTP > IP: 127.0.0.1, Port ID: 8081 > Save.
 
     e.	Open New Tab in Firefox > Enable ZAP from FoxyProxy > Open any website > Traffic will get captured in ZAP.
-
+//-------------------------------------------------------------------------------------------------------------------------------
 7.	Installing Mutillidae
+//-------------------------------------------------------------------------------------------------------------------------------
 8.	Intercepting request with ZAP (Man in the Middle Attack-MITM)
     a.	Open Mutillidae > Login > Start FoxyProxy for ZAP > Username: admin & Password: adminpass.
 
@@ -140,9 +136,9 @@ ZAP TUTORIALS
 
     g.	Now, everything done on Mutillidae page will be stopped at every breakpoint in ZAP.
 
-    h.	Changing Captured Username and Password:	The username or password captured using “Set Break on all request and response” Green Button can be 
-    changed and then be forwarded using “Submit and continue to next breakpoint” forward arrow button.
-
+    h.	Changing Captured Username and Password: The username or password captured using “Set Break on all request and response” Green Button can 
+    be changed and then be forwarded using “Submit and continue to next breakpoint” forward arrow button.
+//-------------------------------------------------------------------------------------------------------------------------------
 9.	Intercepting specific request with ZAP
     Case 01:
     a.	Let’s say we want to capture “DNS Request” page from Mutillidae.
@@ -182,6 +178,8 @@ ZAP TUTORIALS
 
     m.	Again go to Mutillidae and enter IP starting from 1.2.x.x, it will get captured.
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 10.	Manually explore for Vuln Assessment in ZAP
     a.	Open ZAP and click on “Manual Explore” option in Workspace Window. Select the Browser “Firefox”. Enter the website to be examined.
 
@@ -190,6 +188,8 @@ ZAP TUTORIALS
     c.	Even if we open Firefox externally and browse any page, it will not be recorded in ZAP.
 
     d.	     Go to Alerts in Information Window to check Vulns manually.
+
+//-------------------------------------------------------------------------------------------------------------------------------
 
 11.	Spidering a Website with OWASP
     a.	      Set of URLs being explored by Spider are called Seeds.
@@ -232,6 +232,8 @@ ZAP TUTORIALS
                 www.testing.com/?foo=345 will be visited but 
                 www.testing.com/?bar=345 will also be visited.
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 12.	Automated Vuln Assessment of a Single Page in ZAP
     a.	Open Mutillidae and login using wrong username and password. This will get captured in ZAP as POST request. Click that POST request on Information 
     Window > Right Click > “Show in Site Map”.
@@ -241,6 +243,8 @@ ZAP TUTORIALS
     c.	A new tab called “Active Scan” will open in Information Window.
 
     d.	Vuln in that page can be seen in Alerts Tab.
+
+//-------------------------------------------------------------------------------------------------------------------------------
 
 13.	Automated Vuln Assessment of Entire Site in ZAP
     a.	Open ZAP > Automated Scan > Paste URL in “URL to Attack”.
@@ -257,11 +261,15 @@ ZAP TUTORIALS
 
     g.	Summary of Alerts can be seen in Footer Bar
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 14.	Automated Vuln Assessment of a Partial Site in ZAP
     a.	Once ZAP and Mutillidae are started, ZAP starts capturing site contents in Tree View Window as folders. 
 
     b.	Any one folder can be selected and Active Scan can be performed on it. No additional folders will get added in Tree View as the scan is being 
     conducted on one particular folder only.
+
+//-------------------------------------------------------------------------------------------------------------------------------
 
 15.	Generating Vuln Assessment Report in ZAP
     a.	Let’s say you started manual testing on a website. 
@@ -276,6 +284,8 @@ ZAP TUTORIALS
 
     f.	To change risk level / severity of any Alert:	Go to Alert > Select the alert highlighted > Right Click > Edit > Change severity > Save
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 16.	Contexts, scope and Modes in ZAP
     a.	Contexts:	It is a way of relating a set of URLs together. Context generally corresponds to a web application being tested. Contexts are defined as 
     a set of regular expressions using Regex. Contexts can be configured via:
@@ -285,8 +295,8 @@ ZAP TUTORIALS
 
     b.	Configuring Context: Method 1
 
-        i.	Select the site folder in Tree View Window. File Menu > Session Properties… (Control + Alt + P) > Under Contexts: “1: Default Contexts” : “1: 
-        Include in Context” > Add > Type site name including * (eg http://192.168.0.186/mutillidae.*)
+        i.	Select the site folder in Tree View Window. File Menu > Session Properties… (Control + Alt + P) > Under Contexts: “1: Default Contexts” : 
+	“1: Include in Context” > Add > Type site name including * (eg http://192.168.0.186/mutillidae.*)
 
         ii.	OK
 
@@ -330,6 +340,8 @@ ZAP TUTORIALS
 
         iv.	Attack Mode: New nodes that are in Scope are Actively Scanned as they are discovered. 
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 17.	Sessions in ZAP (first screen pop in start)
     a.	Persisting a session:
         i.	Stored in a local database.
@@ -354,7 +366,8 @@ ZAP TUTORIALS
 
     g.	Comparing Sessions: Save two sessions. Open first session.
 
-        i.	Go to Report > “Compare with Another Session” > It will ask for another session (click on second session) > It will ask for another file name 
+        i.	Go to Report > “Compare with Another Session” > It will ask for another session (click on second session) > It will ask for another file 
+	name 
         where both first and second session comparison will be stored.
 
         ii.	It will open up the Browser with Comparison Results. 
@@ -366,6 +379,8 @@ ZAP TUTORIALS
     i.	Saving current session as Snapshot: File > “Snapshot Session As…”
 
     j.	Even if the session is deleted, still snapshot will be there to get the data back.
+
+//-------------------------------------------------------------------------------------------------------------------------------
 
 18.	ZAP Request Editor
     a.	In Mutillidae website > Login > “OWASP Top 10” > “A5 – Cross Site Request Forgery (CSRF)” > “Add to your Blog”
@@ -396,6 +411,8 @@ ZAP TUTORIALS
 
         viii.	Server side validations are implemented to prevent such types of attacks.
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 19.	Passive Scan Rules in ZAP
     a.	Passive Scan Rules define what kind of vuln to check for in the background:
         i.	Application Errors.
@@ -416,6 +433,8 @@ ZAP TUTORIALS
     f.	Eye Icon in Footer Bar: Shows Passive Scan Queue. Some value will be displayed when Passive Scan is running and will become Zero when Scanning is 
     complete.
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 20.	Active Scanning in ZAP
     a.	Active scan can find only certain types of Vulns. Logical vuln like Broken Access Control will not be found using Active Scan. 
     b.	Some examples of Active Scan Rules are:
@@ -432,6 +451,8 @@ ZAP TUTORIALS
     d.	How & where to configure Active Scan Rules-2:
         i.	Tools > Options > Active Scan > …change accordingly.
         ii.	Tools > Options > Active Scan Input Vectors > …change accordingly.
+	
+//-------------------------------------------------------------------------------------------------------------------------------
 
 21.	ZAP Scan Policy
     a.	Look for “Scan Policy Manager…” symbol in toolbar > You will see Default Policy mentioned > Modify > …change accordingly.
@@ -443,6 +464,8 @@ ZAP TUTORIALS
 
     d.	Click on Login page (anyone) found in History tab > Right click > Active Scan > Policy > you will see XSSTest policy there.
 
+//-------------------------------------------------------------------------------------------------------------------------------
+
 22.	Attack Mode
     a.	It is similar to active scanning mostly.
     b.	Select Attack Mode > Active Scan Tab will get added in Information Window
@@ -452,6 +475,13 @@ ZAP TUTORIALS
         i.	This can be used if you want to exploit for any specific vuln in the application.
         ii.	Tools > Options > Active Scan > Attack Mode Scan Policy “select the XSSTest” (created earlier).
         iii.	Now if anything is added to scope, this time the Attack Mode will use XSSTest only.
-        iv.	Also, in this specific policy, we can specify High Strength. (Go to Scan Policy Manager > Click on XSSTest > Modify > Injection > Cross Sight 
+        iv.	Also, in this specific policy, we can specify High Strength. (Go to Scan Policy Manager > Click on XSSTest > Modify > Injection > Cross 
+	Sight 
         Scripting .. > High Strength
+	
+//-------------------------------------------------------------------------------------------------------------------------------
+Follow me at:
+(a) Insta: 	@tech.challenged
+(b) Twitter:	@_techchallenged
+//-------------------------------------------------------------------------------------------------------------------------------
 
